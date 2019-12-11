@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework-rgb</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2|Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body{
+            height: 100vh;
+            background-image:linear-gradient(90deg,#1F2437,#3F4F4F);
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            position: relative; 
+            overflow: hidden;    
+        }
+        #text{
+            font-family: 'Pacifico', cursive;
+            color:whitesmoke;
+            font-size:6rem;
+            text-shadow: wheat 6px 6px 10px;
+        }
+
+        #container{
+            width: 900px;
+            height: 400px;
+            border: 3px solid whitesmoke;
+            box-shadow:  0px 0px 10px wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #left{
+            width: 600px;
+            height: 400px;
+            
+        }
+        #right{
+            width: 300px;
+            height: 400px;
+            align-self: center;
+            padding: 10px;
+        }
+        #box{
+            width: 600px ;
+            height: 400px ;
+            font-size: 50px;
+            line-height: 400px;
+            text-align: center;
+            font-family: 'Exo 2', sans-serif;
+        }
+        #footer{
+            position: absolute;
+            bottom: 40px;
+            color:white;
+            font-family: 'Exo 2', sans-serif;
+
+        }
+        .buttonR{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(243, 108, 108) ;
+            background-color: rgb(188,106,111);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .buttonR:hover{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(243, 108, 108) ;
+            background-color: rgb(124, 53, 58);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-family: 'Exo 2', sans-serif;
+            transition: 0.5s;
+        }
+        .buttonG{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(73, 104, 34) ;
+            background-color: rgb(152, 188, 106);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+            
+        }
+        .buttonG:hover{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(152, 188, 106) ;
+            background-color: rgb(73, 104, 34);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+            transition: 0.5s;
+        }
+        .buttonB{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(22, 62, 85);
+            background-color: rgb(106, 158, 188);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .buttonB:hover{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-right: 10px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(106, 158, 188);
+            background-color: rgb(22, 62, 85);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+            transition: 0.5s;
+        }
+        .button_math{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-top: 10px;
+            border-radius: 80px;
+            border: 2px solid rgb(98, 85, 42);
+            background-color: rgb(158, 149, 119);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+        }
+        .button_math:hover{
+            width: 80px; 
+            height: 80px;
+            margin-left: 5px;
+            margin-top: 10px;
+            width: 80px; 
+            height: 80px;
+            border-radius: 80px;
+            border: 2px solid rgb(158, 149, 119);
+            background-color: rgb(98, 85, 42);
+            cursor: pointer;
+            color:white;
+            text-decoration: bolder;
+            font-size: 2rem;
+            font-family: 'Exo 2', sans-serif;
+            transition: 0.5s;
+        }
+        
+        input[type="range"]{
+            -webkit-appearance: none;
+            /* overflow:hidden;     限定範圍 */
+            width:160px;
+            height:10px;
+            background:rgb(156, 156, 156);
+            outline : none;      
+            
+        }
+        input[type="range"]::-webkit-slider-thumb{
+            -webkit-appearance: none;
+            position: relative;    /* 設為相對位置，為了前後區塊的絕對位置而設定 */
+            width:30px;
+            height:30px;
+            background:rgb(238, 236, 236);
+            border-radius:50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="text">
+            Color Picker
+    </div>
+    <div id="container">
+        
+        <div id="left">
+                <div id="box"></div>
+        </div>
+        <div id="right">
+            <button class="buttonR" onclick="clk('R')">R</button>
+            <input id="Rrange" type="range" min="0" max="255" oninput="input('R')"><br>
+            <button class="buttonG" onclick="clk('G')">G</button>
+            <input id="Grange" type="range" min="0" max="255" oninput="input('G')"><br>
+            <button class="buttonB" onclick="clk('B')">B</button>
+            <input id="Brange" type="range" min="0" max="255" oninput="input('B')"><br>
+            <br>
+            <button class="button_math" onmousedown="math('plus')" onmouseup="clearInterval(time)">+</button>
+            <button class="button_math" onmousedown="math('sub')" onmouseup="clearInterval(time)">-</button>
+            <button class="button_math" onmousedown="math('rand')" onmouseup="clearInterval(time)">?</button> 
+        </div>   
+        
+    </div>
+    <div id="footer">Copyright © 2019 Jasper </div>    
+    <script>
+        var OgnRed=Math.floor(Math.random()*256);
+        var OgnGreen=Math.floor(Math.random()*256);
+        var OgnBlue=Math.floor(Math.random()*256);
+        var Area=document.getElementById("box")
+        show()
+        
+        function show(){
+            document.getElementById('box').innerHTML=`#${hex(OgnRed)}${hex(OgnGreen)}${hex(OgnBlue)}`
+            Area.style.backgroundColor=`rgb(${OgnRed},${OgnGreen},${OgnBlue})`;
+            Area.style.color="rgb("+(255-OgnRed)+","+(255-OgnGreen)+","+(255-OgnBlue);
+            
+        }
+
+        function hex(num){
+            newhex=parseInt(num,10).toString(16).toUpperCase();
+            return (newhex.length<2)?`0${newhex}`:newhex
+        } 
+
+
+        function clk(color){
+            switch (color) {
+                case 'R':
+                    do{
+                        var NewRed=prompt("請輸入R值(範圍:0-255)",`${OgnRed}`);
+                    }while(!(NewRed<256));
+
+                    if(NewRed!=null){
+                        document.getElementById("Rrange").value=OgnRed=NewRed;
+                        show()
+                    }              
+                break;
+                case 'G':
+                    do{
+                        var NewGreen=prompt("請輸入G值(範圍:0-255)",`${OgnGreen}`);  
+                    }while(!(NewGreen<256));
+                    if(NewGreen!=null){
+                        document.getElementById("Rrange").value=OgnGreen=NewGreen;
+                        show()
+                    }
+                break;
+                case 'B':
+                    do{
+                        var NewBlue=prompt("請輸入B值(範圍:0-255)",`${OgnBlue}`);  
+                    }while(!(NewBlue<256));
+                    if(NewBlue!=null){
+                        document.getElementById("Rrange").value=OgnBlue=NewBlue;
+                       show()
+                    }
+                break;
+                
+            }
+        }
+        function input(color2){
+            switch(color2){
+                case('R'):
+                    OgnRed=document.getElementById('Rrange').value;
+                    show()
+                break;
+                case('G'):
+                    OgnGreen=document.getElementById('Grange').value;
+                    show()
+                break;
+                case('B'):
+                    OgnBlue=document.getElementById('Brange').value;
+                    show()
+                break;
+            }
+        }
+
+        function math(way){
+            time=setInterval(function(){
+                switch(way){
+                    case('plus'):
+                        if(OgnRed<255){
+                            OgnRed++;
+                            document.getElementById('Rrange').value=OgnRed; 
+                            show()
+                        }
+                        if(OgnGreen<255){
+                            OgnGreen++;
+                            document.getElementById('Grange').value=OgnGreen; 
+                            show()
+                        }
+                        if(OgnBlue<255){
+                            OgnBlue++;
+                            document.getElementById('Brange').value=OgnBlue; 
+                            show()
+                        }
+                    break;
+                    case('sub'):
+                        if(OgnRed>0){
+                            OgnRed--;
+                            document.getElementById('Rrange').value=OgnRed; 
+                            show()
+                        }
+                        if(OgnGreen>0){
+                            OgnGreen--;
+                            document.getElementById('Grange').value=OgnGreen; 
+                            show()
+                        }
+                        if(OgnBlue>0){
+                            OgnBlue--;
+                            document.getElementById('Brange').value=OgnBlue; 
+                            show()
+                        }
+                    break;
+                    case('rand'):
+                        OgnRed=Math.floor(Math.random()*256);
+                        OgnGreen=Math.floor(Math.random()*256);
+                        OgnBlue=Math.floor(Math.random()*256);
+                        document.getElementById('Rrange').value=OgnRed;
+                        document.getElementById('Grange').value=OgnGreen;
+                        document.getElementById('Brange').value=OgnBlue; 
+                        show()
+                    break;
+            }
+            hex()      
+            },50)
+        }
+        
+    </script>
+</body>
+</html>

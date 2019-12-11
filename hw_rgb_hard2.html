@@ -239,7 +239,9 @@
             document.getElementById('box').innerHTML=`#${hex(OgnRed)}${hex(OgnGreen)}${hex(OgnBlue)}`
             Area.style.backgroundColor=`rgb(${OgnRed},${OgnGreen},${OgnBlue})`;
             Area.style.color="rgb("+(255-OgnRed)+","+(255-OgnGreen)+","+(255-OgnBlue);
-            
+            document.getElementById("Rrange").value=OgnRed;
+            document.getElementById("Grange").value=OgnGreen;
+            document.getElementById("Brange").value=OgnBlue;
         }
 
         function hex(num){
